@@ -1,6 +1,2 @@
 square table, material: acril, colour: red, price: 1296$
 
-circle table, material: quarz, colour: white, price: 7756.8$
-
-Maksim Mochalov
-0909090909

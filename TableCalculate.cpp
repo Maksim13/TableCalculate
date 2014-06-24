@@ -14,6 +14,13 @@ int main()
 		}
 	}
 	catch(Range *ex){ex->sendMessage();}
+	string m;
+	f1 >> m;
+	int mode;
+	if (m[0]=='1') mode=1;
+	else if (m[0]=='2') mode=2;
+	else mode=0;
+	if (mode==0) f1.seekg(0);
 	vector <Table *>::iterator i;
 	SquareTable *s = new SquareTable;
 	CircleTable *c = new CircleTable;
@@ -21,10 +28,10 @@ int main()
 	{
 		while(!f1.eof())
 		{
-			f1 >> *s;
-			v.push_back(new SquareTable(*s));
-			f1 >> *c;
-			v.push_back(new CircleTable(*c));
+			if (mode==0 || mode==1) {f1 >> *s;
+			v.push_back(new SquareTable(*s));}
+			if (mode==0 || mode==2) {f1 >> *c;
+			v.push_back(new CircleTable(*c));}
 		}
 	}
 	catch(Range *ex){ex->sendMessage();}
