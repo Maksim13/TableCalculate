@@ -1,0 +1,2 @@
+red acril 300 1 1 1.3
+white quarz 456 1 4
